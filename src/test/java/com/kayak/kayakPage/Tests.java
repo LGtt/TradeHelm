@@ -1,7 +1,5 @@
 package com.kayak.kayakPage;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -73,7 +71,7 @@ public class Tests {
     
     
     
-    @Test
+  
     public void goToSite() {
 
     	//Testing if the Site URL and loading are OK
@@ -83,6 +81,9 @@ public class Tests {
 
         Assert.assertEquals(driver.getTitle(), "Encuentra ofertas de alquiler de autos | KAYAK");
         Reporter.log("Site Confirmation");
+        
+        //search
+        
     }
 
 
@@ -90,15 +91,17 @@ public class Tests {
     public void search() {
 
     	//Go to the Cars page
-        CarsPage carsPage = PageFactory.initElements(driver, CarsPage.class);
-        carsPage.go(driver);
+    	CarsPage carsPage = new CarsPage();
+    	
+    	driver.navigate().to("http://www.kayak.com/cars");
         Reporter.log("Navigate to Site");
-
         //Do the Search in the site
         carsPage.searching("SFO");
         Reporter.log("Searching in the Site");
         
+        
     }
+    /*
       public void DespuescompletarElSearch(){  
         //Search confirmation
         SearchResultsPage searchPage = PageFactory.initElements(driver, SearchResultsPage.class);
@@ -120,5 +123,5 @@ public class Tests {
 
 
     }
-
+*/
 }
