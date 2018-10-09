@@ -48,13 +48,13 @@ public class CarsPage {
        
     	//((WebElement) inputLocationDisplay).click();
     	//assertTrue(((WebElement) pickCity).isDisplayed());
-        driver.findElement(locationDisplay).click();
-    	driver.findElement(pickCity).sendKeys(query);
+      //  driver.findElement(locationDisplay).click();
+    	driver.findElement(inputLocationSearch).sendKeys(query);
     	//((WebElement) pickCity).sendKeys(query);
     	//((WebElement) airportSFO).click();
-    	//((WebElement) inputLocationSearch).submit();
+    	//((WebElement) inputLocationSearch).submit();	
         driver.findElement(airportSFO).click();
-        driver.findElement(inputLocationSearch).submit();
+        driver.findElement(searchSubmit).submit();
         
     }
 

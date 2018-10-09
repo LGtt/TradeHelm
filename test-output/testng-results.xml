@@ -5,21 +5,21 @@
       <![CDATA[Navigate to Site]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14536" started-at="2018-10-08T20:39:11Z" finished-at="2018-10-08T20:39:25Z">
+  <suite name="Default suite" duration-ms="12538" started-at="2018-10-09T16:06:30Z" finished-at="2018-10-09T16:06:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14536" started-at="2018-10-08T20:39:11Z" finished-at="2018-10-08T20:39:25Z">
+    <test name="Default test" duration-ms="12538" started-at="2018-10-09T16:06:30Z" finished-at="2018-10-09T16:06:42Z">
       <class name="com.kayak.kayakPage.Tests">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="before" is-config="true" duration-ms="5464" started-at="2018-10-08T17:39:11Z" finished-at="2018-10-08T17:39:16Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="before" is-config="true" duration-ms="5981" started-at="2018-10-09T13:06:30Z" finished-at="2018-10-09T13:06:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="FAIL" signature="search()[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="search" duration-ms="9050" started-at="2018-10-08T17:39:16Z" finished-at="2018-10-08T17:39:25Z">
+        <test-method status="FAIL" signature="search()[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="search" duration-ms="6530" started-at="2018-10-09T13:06:36Z" finished-at="2018-10-09T13:06:42Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.kayak.kayakPage.CarsPage.searching(CarsPage.java:51)
-	at com.kayak.kayakPage.Tests.search(Tests.java:99)
+	at com.kayak.kayakPage.CarsPage.searching(CarsPage.java:52)
+	at com.kayak.kayakPage.Tests.search(Tests.java:102)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,7 +53,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-10-08T17:39:25Z" finished-at="2018-10-08T17:39:25Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.kayak.kayakPage.Tests@4520ebad]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-10-09T13:06:42Z" finished-at="2018-10-09T13:06:42Z">
           <params>
             <param index="0">
               <value>
