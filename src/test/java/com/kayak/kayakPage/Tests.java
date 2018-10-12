@@ -74,17 +74,26 @@ public class Tests {
         carsPage.go(driver);
         Reporter.log("Navigate to Site");
         //Verify if the Page is right
-        Assert.assertEquals(driver.getTitle(), "Encuentra ofertas de alquiler de autos | KAYAK");
+        Assert.assertEquals(driver.getTitle(), "Car Rentals: Find Cheap Car Rentals & Rental Car Deals - KAYAK");
         Reporter.log("Site Confirmation");
        
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //Do the Search in the site
-        carsPage.searching("SFO");
+        carsPage.loadSearchWebElements(driver);
+        carsPage.searching("San Francisco");
         Reporter.log("Searching in the Site");
         
     }
-    /*
+    
+    @Test
+    public void findPrice() {
+    
+    	SearchResultsPage searchResultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
+    	searchResultsPage.getLowestPrice(driver);
+    	
+    } 	
+    	/*
       public void DespuescompletarElSearch(){  
         //Search confirmation
         SearchResultsPage searchPage = PageFactory.initElements(driver, SearchResultsPage.class);

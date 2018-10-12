@@ -1,17 +1,44 @@
 package com.kayak.kayakPage;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 public class SearchResultsPage {
+	
+	private WebDriver driver;
+	private By lowestPrice;
+	private WebElement allElements;
+	
+	
+	
+
+public List <WebElement> getLowestPrice(WebDriver driver){
+	    this.driver = driver;
+	    lowestPrice = By.xpath("//a[@role = 'button']/div/div/div");
+
+       
+	    List <WebElement> allElements = driver.findElements(lowestPrice);
+	//	WebElement getPublication = allElements.get(position-1).findElement(By.tagName("div"));
+        
+		for(WebElement ele :allElements) {
+		    System.out.println("Name + Number===>"+ele.getText());
+		    String s=ele.getText();
+		    s=s.substring(s.indexOf("(")+1, s.indexOf(")"));
+		    System.out.println("Number==>"+s);
+		}
+		
+		
+		return allElements;
+	    
+}	
+public void setSearchedFor(WebElement allElements) {
+    this.allElements = allElements;
+}
+
 /*
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[4]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[2]/div[2]")
-    private WebElement LowestPrice;
-
-    
-    public WebElement getPublication (WebDriver driver, int position){
-
-        List <WebElement> CssElements = driver.findElements(By.className("search-result"));
-        WebElement getPublication = CssElements.get(position-1).findElement(By.tagName("a"));
-        return getPublication;
-    }
 
  //   public WebElement getPublications(int position){
    // 	return getPublication;
